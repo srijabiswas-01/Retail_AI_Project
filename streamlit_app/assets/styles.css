@@ -1,0 +1,257 @@
+:root {
+  --bg: #0f131a;
+  --panel: #171d26;
+  --panel-soft: #1d2530;
+  --text: #eef3f8;
+  --muted: #9aa9b8;
+  --line: #2a3442;
+  --cyan: #37c6d9;
+  --green: #64d68a;
+  --amber: #f2b84b;
+  --rose: #ef6f86;
+  --blue: #73a7ff;
+}
+
+.block-container {
+  padding-top: 1.8rem;
+  padding-bottom: 2.5rem;
+}
+
+[data-testid="stSidebar"] {
+  background: #111720;
+}
+
+h1, h2, h3 {
+  letter-spacing: 0;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.app-title {
+  color: var(--text);
+  font-size: 2rem;
+  font-weight: 750;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.app-caption {
+  color: var(--muted);
+  font-size: 0.98rem;
+  margin: 0 0 1.2rem;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1.2rem 0 0.7rem;
+}
+
+[data-testid="stMetric"] {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 15px 16px;
+  min-height: 118px;
+}
+
+[data-testid="stMetricLabel"] {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+[data-testid="stMetricValue"] {
+  color: var(--text);
+  font-weight: 750;
+}
+
+[data-testid="stMetricDelta"] {
+  color: var(--muted);
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+}
+
+.icon-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background:
+    linear-gradient(90deg, var(--cyan) 0 23%, transparent 23% 30%, var(--green) 30% 53%, transparent 53% 60%, var(--amber) 60% 83%, transparent 83%),
+    var(--panel-soft);
+  border: 1px solid var(--line);
+}
+
+.icon-logo::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  right: 7px;
+  bottom: 7px;
+  height: 3px;
+  background: var(--rose);
+  border-radius: 2px;
+}
+
+.icon-dashboard {
+  border: 2px solid var(--cyan);
+  border-radius: 5px;
+}
+
+.icon-dashboard::before,
+.icon-dashboard::after {
+  content: "";
+  position: absolute;
+  background: var(--cyan);
+  border-radius: 2px;
+}
+
+.icon-dashboard::before {
+  left: 4px;
+  bottom: 4px;
+  width: 3px;
+  height: 8px;
+  box-shadow: 6px -4px 0 var(--green), 12px -1px 0 var(--amber);
+}
+
+.icon-sales::before {
+  content: "";
+  position: absolute;
+  inset: 4px 3px 5px;
+  border-left: 2px solid var(--blue);
+  border-bottom: 2px solid var(--blue);
+}
+
+.icon-sales::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 8px;
+  width: 13px;
+  height: 8px;
+  border-top: 2px solid var(--green);
+  border-right: 2px solid var(--green);
+  transform: skew(-22deg);
+}
+
+.icon-forecast {
+  border: 2px solid var(--blue);
+  border-radius: 50%;
+}
+
+.icon-forecast::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  width: 11px;
+  height: 2px;
+  background: var(--amber);
+  box-shadow: 4px -5px 0 var(--cyan);
+  transform: rotate(-25deg);
+}
+
+.icon-inventory {
+  border: 2px solid var(--amber);
+  border-radius: 4px;
+}
+
+.icon-inventory::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  top: 7px;
+  height: 2px;
+  background: var(--amber);
+  box-shadow: 0 6px 0 var(--amber);
+}
+
+.icon-recommend {
+  border: 2px solid var(--green);
+  border-radius: 50%;
+}
+
+.icon-recommend::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 3px;
+  width: 4px;
+  height: 12px;
+  background: var(--green);
+  border-radius: 3px;
+}
+
+.icon-recommend::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 7px;
+  width: 12px;
+  height: 4px;
+  background: var(--green);
+  border-radius: 3px;
+}
+
+.icon-customer::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: -7px 5px 0 -2px var(--blue), 7px 5px 0 -2px var(--green);
+}
+
+.icon-customer::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  height: 8px;
+  border-radius: 9px 9px 3px 3px;
+  background: var(--cyan);
+}
+
+.icon-alert {
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 20px solid var(--rose);
+}
+
+.icon-alert::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 7px;
+  width: 2px;
+  height: 7px;
+  background: #111720;
+  box-shadow: 0 10px 0 #111720;
+}
+
+@media (max-width: 560px) {
+  .app-title {
+    font-size: 1.55rem;
+  }
+}

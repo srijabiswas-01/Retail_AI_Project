@@ -1,0 +1,84 @@
+{
+  "project": "Retail_AI_Project",
+  "created_for": "Retail AI analytics and machine learning dashboard",
+  "data_version": "local_generated_outputs",
+  "models": {
+    "xgboost": {
+      "task": "product_level_demand_forecasting",
+      "model_file": "models/xgboost_model.pkl",
+      "metrics_file": "reports/xgboost_metrics.csv",
+      "feature_importance_file": "reports/xgboost_feature_importance.csv",
+      "training_data": "forecasting/data/forecast_dataset.csv",
+      "target": "quantity",
+      "metrics": {
+        "model": "XGBoost",
+        "MAE": 0.4102773368358612,
+        "RMSE": 0.9046335273415615,
+        "R2": -0.1484543085098266,
+        "train_rows": 22000,
+        "test_rows": 5250
+      }
+    },
+    "lightgbm": {
+      "task": "product_level_demand_forecasting",
+      "model_file": "models/lightgbm_model.pkl",
+      "metrics_file": "reports/lightgbm_metrics.csv",
+      "feature_importance_file": "reports/lightgbm_feature_importance.csv",
+      "training_data": "forecasting/data/forecast_dataset.csv",
+      "target": "quantity",
+      "metrics": {
+        "model": "LightGBM",
+        "MAE": 0.3403245755504876,
+        "RMSE": 0.8279718129935697,
+        "R2": 0.0379459523998089,
+        "train_rows": 22000,
+        "test_rows": 5250
+      }
+    },
+    "prophet": {
+      "task": "daily_total_demand_forecasting",
+      "model_file": "models/prophet_model.pkl",
+      "metrics_file": "reports/prophet_metrics.csv",
+      "forecast_file": "forecasting/prophet_forecast.csv",
+      "training_data": "data/processed/sales_daily.csv",
+      "target": "quantity",
+      "metrics": {
+        "model": "Prophet",
+        "MAE": 106.40716772313878,
+        "RMSE": 146.43331709326955,
+        "R2": -0.4347968184799593,
+        "train_rows": 111,
+        "test_rows": 28
+      }
+    },
+    "lstm": {
+      "task": "daily_total_demand_forecasting",
+      "model_file": "models/lstm_model.keras",
+      "scaler_file": "models/lstm_scaler.pkl",
+      "metrics_file": "reports/lstm_metrics.csv",
+      "training_data": "data/processed/sales_daily.csv",
+      "target": "quantity",
+      "metrics": {
+        "model": "LSTM",
+        "MAE": 98.40860473632812,
+        "RMSE": 129.30527540446337,
+        "R2": -0.0847777166901382,
+        "train_rows": 100,
+        "test_rows": 25
+      }
+    },
+    "recommendation": {
+      "task": "item_to_item_recommendation",
+      "model_file": "models/recommendation_model.pkl",
+      "recommendations_file": "recommendation/top_recommendations.csv",
+      "similarity_file": "recommendation/item_similarity.csv",
+      "training_data": "data/raw/events.csv",
+      "target": "implicit_interaction_score"
+    }
+  },
+  "notes": [
+    "Tree models forecast product-level demand quantity.",
+    "Prophet and LSTM forecast total daily demand quantity.",
+    "Recommendation model stores item-item cosine similarity from implicit events."
+  ]
+}

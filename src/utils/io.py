@@ -1,0 +1,24 @@
+from pathlib import Path
+
+import pandas as pd
+
+
+def read_csv(path: Path, **kwargs) -> pd.DataFrame:
+    if not path.exists():
+        raise FileNotFoundError(f"Required file not found: {path}")
+
+    return pd.read_csv(path, **kwargs)
+
+
+def write_csv(df: pd.DataFrame, path: Path, **kwargs) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    df.to_csv(path, index=False, **kwargs)
+
+
+def validate_columns(df: pd.DataFrame, required_columns: set[str], dataset_name: str) -> None:
+    missing = required_columns - set(df.columns)
+    if missing:
+        raise ValueError(
+            f"{dataset_name} is missing required columns: {sorted(missing)}. "
+            f"Available columns: {list(df.columns)}"
+        )

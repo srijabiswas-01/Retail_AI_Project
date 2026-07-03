@@ -1,0 +1,14 @@
+feature,importance
+rolling_7,0.14826508
+quarter,0.11577625
+rolling_30,0.08912379
+product_id,0.08330529
+lag_1,0.08207729
+lag_7,0.07995165
+week,0.07714362
+weekday,0.074609645
+day,0.07197178
+lag_30,0.06824729
+month,0.060717084
+weekend,0.048811242
+year,0.0

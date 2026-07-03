@@ -1,0 +1,60 @@
+# Core Data Science
+numpy>=1.26.0
+pandas>=2.2.0
+scipy>=1.13.0
+
+# Visualization
+matplotlib>=3.9.0
+plotly>=5.24.0
+
+# Machine Learning
+scikit-learn>=1.5.0
+xgboost>=2.1.0
+lightgbm>=4.5.0
+
+# Time Series Forecasting
+statsmodels>=0.14.2
+prophet>=1.1.6
+
+# Deep Learning
+tensorflow>=2.18.0
+keras>=3.8.0
+
+# Recommendation System
+scikit-surprise>=1.1.4
+
+# Explainable AI
+shap>=0.46.0
+lime>=0.2.0.1
+
+# Optimization
+pulp>=2.9.0
+ortools>=9.11.0
+
+# Database
+sqlalchemy>=2.0.35
+psycopg2-binary>=2.9.10
+pyodbc>=5.2.0
+
+# Streamlit
+streamlit>=1.41.0
+streamlit-option-menu>=0.4.0
+streamlit-aggrid>=1.0.5
+
+# Data Validation
+great-expectations>=1.2.0
+
+# Utilities
+joblib>=1.4.2
+python-dotenv>=1.0.1
+tqdm>=4.67.0
+
+# Date and Time
+python-dateutil>=2.9.0
+
+# Jupyter Development
+jupyter>=1.1.1
+ipykernel>=6.29.5
+
+# Kaggle Dataset Download
+kagglehub>=0.3.5
