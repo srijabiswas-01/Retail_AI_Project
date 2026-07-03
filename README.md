@@ -462,7 +462,3 @@ Then refresh Streamlit.
 ### Forecasting charts look messy
 
 Use the generated daily aggregation in the Streamlit page. Product-level forecast data contains multiple products per date, so charting raw rows directly can create crossed lines.
-
-## License
-
-This project is released under the MIT License. See `LICENSE`.
