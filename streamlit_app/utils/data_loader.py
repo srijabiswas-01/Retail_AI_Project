@@ -91,4 +91,14 @@ def format_number(value: float, decimals: int = 0) -> str:
     if pd.isna(value):
         return "0"
 
+    numeric_value = float(value)
+    absolute_value = abs(numeric_value)
+
+    # Prevent large KPI values from being truncated inside Streamlit metric
+    # cards while retaining the full precision for smaller values.
+    if absolute_value >= 1_000_000_000:
+        return f"{numeric_value / 1_000_000_000:,.1f}B"
+    if absolute_value >= 1_000_000:
+        return f"{numeric_value / 1_000_000:,.1f}M"
+
     return f"{value:,.{decimals}f}"
