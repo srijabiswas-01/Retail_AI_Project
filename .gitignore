@@ -102,6 +102,9 @@ models/*.h5
 recommendation/item_similarity.csv
 recommendation/top_recommendations.csv
 
+# Runtime output used by the deployed recommendations page.
+!recommendation/top_recommendations.csv
+
 # =====================================================
 
 # Forecast Outputs
@@ -111,6 +114,12 @@ recommendation/top_recommendations.csv
 forecasting/data/
 forecasting/*.csv
 
+# Runtime outputs used by the deployed forecasting page.
+!forecasting/data/
+forecasting/data/*
+!forecasting/data/forecast_dataset.csv
+!forecasting/prophet_forecast.csv
+
 # =====================================================
 
 # Generated Analytics Outputs
@@ -119,6 +128,11 @@ forecasting/*.csv
 
 customer_analytics/*.csv
 inventory/*.csv
+
+# Runtime outputs used by deployed analytics pages.
+!customer_analytics/rfm_analysis.csv
+!customer_analytics/customer_segments.csv
+!inventory/inventory_optimization.csv
 
 # =====================================================
 
