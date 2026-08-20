@@ -73,6 +73,12 @@ data/raw/
 data/staging/
 data/processed/
 
+# The Streamlit dashboard needs this small aggregate at runtime. Keep raw and
+# detailed processed datasets private, but allow this deployment artifact.
+!data/processed/
+data/processed/*
+!data/processed/sales_daily.csv
+
 # =====================================================
 
 # Model Artifacts

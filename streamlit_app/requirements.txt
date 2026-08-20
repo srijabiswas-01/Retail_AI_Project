@@ -1,3 +1,6 @@
+# Runtime dependencies used by the Streamlit dashboard.
+# Training dependencies belong in the repository-level requirements.txt and
+# should not be installed by Streamlit Community Cloud.
 streamlit>=1.41,<2
 pandas>=2.2,<3
 plotly>=5.24,<7
